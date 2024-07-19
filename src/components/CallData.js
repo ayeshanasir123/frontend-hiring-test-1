@@ -160,30 +160,6 @@ const CallList = () => {
                         <option value="Unarchived">Unarchived</option>
                     </select>
                 </div>
-                <div className="d-flex align-items-center">
-                    <DatePicker
-                        selected={startDate}
-                        onChange={date => setStartDate(date)}
-                        selectsStart
-                        startDate={startDate}
-                        endDate={endDate}
-                        placeholderText="Start Date"
-                        className="form-control"
-                    />
-                    <DatePicker
-                        selected={endDate}
-                        onChange={date => setEndDate(date)}
-                        selectsEnd
-                        startDate={startDate}
-                        endDate={endDate}
-                        minDate={startDate}
-                        placeholderText="End Date"
-                        className="form-control ml-2"
-                    />
-                    <Button variant="primary" className="ml-2" onClick={() => fetchCallsData(currentPage)}>
-                        Apply Date Filter
-                    </Button>
-                </div>
                 <Button variant="secondary" onClick={() => setGroupByDate(!groupByDate)}>
                     {groupByDate ? 'Ungroup Calls' : 'Group Calls by Date'}
                 </Button>
